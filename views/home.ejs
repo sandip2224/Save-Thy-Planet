@@ -16,268 +16,231 @@
 
 <body>
     <%- include('partials/navbar.ejs') %>
-        <% arrays.forEach(item=>{ %>
-            <div class="slider-item js-fullheight" style="background-image:url(images/<%= item.url%>.jpg);">
+        <div class="home-slider owl-carousel js-fullheight">
+            <div class="slider-item js-fullheight" style="background-image:url(images/african-forest-elephant.jpg);">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
                         <div class="col-md-12 ftco-animate">
                             <div class="text w-100 text-center">
-                                <h1 class="mb-3">
-                                    <%= item.name %>
-                                </h1>
+                                <h1 class="mb-3">African forest elephant</h1>
                                 <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <% }) %>
-                <div class="home-slider owl-carousel js-fullheight">
-                    <div class="slider-item js-fullheight"
-                        style="background-image:url(images/african-forest-elephant.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">African forest elephant</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="slider-item js-fullheight" style="background-image:url(images/amur-leopard.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Amur Leopard</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slider-item js-fullheight" style="background-image:url(images/black-rhino.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Black Rhino</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slider-item js-fullheight" style="background-image:url(images/bornean-orangutan.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Bornean Orangutan</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight"
-                        style="background-image:url(images/cross-river-gorilla.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Cross River Gorilla</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(images/hawksbill-turtle.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Hawksbill Turtle</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(images/javan-rhino.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Javan Rhino</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(images/orangutan.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Orangutan</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(images/saola.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Saola</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(images/sumatran-elephant.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Sumatran Elephant</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(sumatran-orangutan.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Sumatran Orangutan</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(images/sumatran-rhino.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Sumatran Rhino</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(images/sunda-tiger.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Sunda Tiger</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight" style="background-image:url(images/vaquita.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Vaquita</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight"
-                        style="background-image:url(images/western-lowland-gorilla.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Western Lowland Gorilla</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-item js-fullheight"
-                        style="background-image:url(images/yangtze-finless-porpoise.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div
-                                class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                                <div class="col-md-12 ftco-animate">
-                                    <div class="text w-100 text-center">
-                                        <h1 class="mb-3">Yangtze Finless Porpoise</h1>
-                                        <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
-                                    </div>
-                                </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/amur-leopard.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Amur Leopard</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                    crossorigin="anonymous"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                    crossorigin="anonymous"></script>
-                <script src="js/owl.carousel.min.js"></script>
-                <script src="js/home.js"></script>
+            <div class="slider-item js-fullheight" style="background-image:url(images/black-rhino.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Black Rhino</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item js-fullheight" style="background-image:url(images/bornean-orangutan.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Bornean Orangutan</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/cross-river-gorilla.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Cross River Gorilla</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/hawksbill-turtle.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Hawksbill Turtle</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/javan-rhino.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Javan Rhino</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/orangutan.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Orangutan</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/saola.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Saola</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/sumatran-elephant.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Sumatran Elephant</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(sumatran-orangutan.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Sumatran Orangutan</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/sumatran-rhino.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Sumatran Rhino</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/sunda-tiger.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Sunda Tiger</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/vaquita.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Vaquita</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/western-lowland-gorilla.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Western Lowland Gorilla</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url(images/yangtze-finless-porpoise.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-3">Yangtze Finless Porpoise</h1>
+                                <a href="#"><button class="btn btn-secondary btn-lg">Learn More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/home.js"></script>
 </body>
 
 </html>
