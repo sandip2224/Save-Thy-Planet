@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+.description{
+    margin-top: 20px;
+    font-size: larger;
+}
