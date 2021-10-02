@@ -10,8 +10,9 @@ const razorpay = new Razorpay({
 })
 const router = express.Router()
 
-const { blogs, animals } = require("../list")
+const { blogs, animals } = require("../utils/list")
 
+// @GET /home
 router.get('/', (req, res) => {
     res.render("home", {
         keyId: process.env.keyId,
@@ -19,10 +20,12 @@ router.get('/', (req, res) => {
     })
 })
 
+// @GET /home
 router.get('/home', (req, res) => {
     res.redirect("/")
 })
 
+// @GET /stories
 router.get('/stories', (req, res) => {
     res.render('stories', {
         blogs,
@@ -30,12 +33,14 @@ router.get('/stories', (req, res) => {
     })
 })
 
+// @GET /contact_page
 router.get('/contact', (req, res) => {
     res.render('contact', {
         keyId: process.env.keyId
     })
 })
 
+// @POST /contact_form
 router.post('/form', (req, res) => {
     console.log(req.body)
     const msg = {
@@ -60,14 +65,17 @@ router.post('/form', (req, res) => {
         })
 })
 
+// @GET /mail_transfer_success
 router.get('/success', (req, res) => {
     res.render('error/successMail')
 })
 
+// @GET /mail_transfer_fail
 router.get('/failure', (req, res) => {
     res.render('error/failureMail')
 })
 
+// @POST /payment_success_or_fail
 router.post('/success', (req, res) => {
     razorpay.payments.fetch(req.body.razorpay_payment_id).then(paymentDocument => {
         if (paymentDocument.status === 'captured') {
@@ -79,6 +87,7 @@ router.post('/success', (req, res) => {
     })
 })
 
+// @GET /story
 router.get('/stories/:storyVal', (req, res) => {
     const storyName = req.params.storyVal
     console.log(storyName)
@@ -91,6 +100,7 @@ router.get('/stories/:storyVal', (req, res) => {
     })
 })
 
+// @POST /payment_gateway
 router.post('/order', (req, res) => {
     var options = {
         amount: 50000,
