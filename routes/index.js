@@ -58,13 +58,16 @@ router.get('/failure', (req, res) => {
     res.render('error/failureMail')
 })
 
-router.get('/animal/:animalName', (req, res) => {
-    console.log(req.params.animalName);
-})
-
 router.get('/stories/:storyVal', (req, res) => {
     const storyName = req.params.storyVal
-    res.render("story")
+    console.log(storyName)
+    blogs.forEach(blog => {
+        if (blog.title === storyName) {
+            res.render("story", {
+                blogval: blog
+            })
+        }
+    })
 })
 
 module.exports = router
