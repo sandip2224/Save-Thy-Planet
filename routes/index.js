@@ -1,4 +1,7 @@
 const express = require('express')
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
 const router = express.Router()
 
 const { blogs, animals } = require("../list")
@@ -25,6 +28,38 @@ router.get('/stories', (req, res) => {
 
 router.get('/contact', (req, res) => {
     res.render('contact')
+})
+
+router.get('/success', (req, res) => {
+    res.render('successMail')
+})
+
+router.get('/failure', (req, res) => {
+    res.render('failureMail')
+})
+
+router.post('/form', (req, res) => {
+    console.log(req.body)
+    const msg = {
+        to: 'sandipan2224@gmail.com',
+        from: 'sandipan2224@gmail.com',
+        subject: `Email from ${req.body.name}`,
+        text:
+            `
+            Name: ${req.body.name}
+            Email: ${req.body.email}
+            Message: ${req.body.text}
+            `
+    }
+    sgMail
+        .send(msg)
+        .then(() => {
+            res.redirect('/success')
+        })
+        .catch((error) => {
+            console.error(error)
+            res.redirect('/failure')
+        })
 })
 
 router.get('/stories/:storyVal', (req, res) => {
