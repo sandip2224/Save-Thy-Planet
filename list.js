@@ -10,29 +10,48 @@ const d1 = {
     truth: "White tigers are not a separate subspecies of tiger. There is only one tiger species and only two recognized subspecies in the world—the Continental (Panthera tigris tigris) and the Sunda (Panthera tigris sondaica). The color of the white tiger's fur is the result of a genetic mutation called leucism. In fact, this white coat would be a hindrance in the wild, as it doesn’t provide a tiger with any camouflage, which greatly reduces their chance of survival. The white tiger is a result of a rare genetic mutation and the most efficient way to breed them is by using two tigers who have the recessive genes needed to produce offspring with a white coat. In captive breeding facilities these two individuals are often related, making inbreeding common. In the US, all white tigers originate from a single male white continental tiger which was imported to the country decades ago."
 }
 
-// const animals = [
-//     {
-//         "name": "African forest elephant",
-//         "url": ""
-//     }
-
-//     "name" : "Amur Leopard",
-//     "name" : "Black Rhino",
-//     "name" : "Bornean Orangutan",
-//     "name" : "Cross River Gorilla",
-//     "name" : "Hawksbill Turtle",
-//     "name" : "Javan Rhino",
-//     "name" : "Orangutan",
-//     "name" : "Saola",
-//     "name" : "Sumatran Elephant",
-//     "name" : "Sumatran Orangutan",
-//     "name" : "Sumatran Rhino",
-//     "name" : "Sunda Tiger",
-//     "name" : "Vaquita",
-//     "name" : "Western Lowland Gorilla",
-//     "name" : "Yangtze Finless Porpoise"
-// ]
+const animals = [
+    {
+        name: "African forest elephant",
+        url: "images/slider/african-forest-elephant.jpg"
+    },
+    {
+        name: "Amur Leopard",
+        url: "images/slider/amur-leopard.jpg"
+    }, {
+        "name": "Black Rhino",
+        url: "images/slider/black-rhino.jpg"
+    },
+    {
+        "name": "Bornean Orangutan",
+        url: "images/slider/bornean-orangutan.jpg"
+    },
+    {
+        "name": "Cross River Gorilla",
+        url: "images/slider/cross-river-gorilla.jpg"
+    },
+    {
+        "name": "Hawksbill Turtle",
+        url: "images/slider/hawksbill-turtle.jpg"
+    },
+    {
+        "name": "Javan Rhino",
+        url: "images/slider/javan-rhino.jpg"
+    },
+    {
+        "name": "Orangutan",
+        url: "images/slider/orangutan.jpg"
+    },
+    {
+        "name": "Saola",
+        url: "images/slider/saola.jpg"
+    },
+    {
+        "name": "Sumatran Rhino",
+        url: "images/slider/sumatran-rhino.jpg)"
+    }
+]
 
 module.exports = {
-    t1, d1
+    t1, d1, animals
 }
