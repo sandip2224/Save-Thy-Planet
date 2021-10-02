@@ -1,13 +1,20 @@
 const express = require('express')
 const sgMail = require('@sendgrid/mail')
+const Razorpay = require('razorpay')
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
+const razorpay = new Razorpay({
+    key_id: process.env.keyId,
+    key_secret: process.env.keySecret
+})
 const router = express.Router()
 
 const { blogs, animals } = require("../list")
 
 router.get('/', (req, res) => {
     res.render("home", {
+        keyId: process.env.keyId,
         animals
     })
 })
@@ -58,6 +65,21 @@ router.get('/failure', (req, res) => {
     res.render('error/failureMail')
 })
 
+router.post('/success', (req, res) => {
+    razorpay.payments.fetch(req.body.razorpay_payment_id).then(paymentDocument => {
+        if (paymentDocument.status === 'captured') {
+            res.json({
+                status: 'Success Payment'
+            })
+        }
+        else {
+            res.json({
+                status: 'Failed Payment'
+            })
+        }
+    })
+})
+
 router.get('/stories/:storyVal', (req, res) => {
     const storyName = req.params.storyVal
     console.log(storyName)
@@ -68,6 +90,17 @@ router.get('/stories/:storyVal', (req, res) => {
             })
         }
     })
+})
+
+router.post('/order', (req, res) => {
+    var options = {
+        amount: 50000,
+        currency: "INR",
+        receipt: "order_rcptid_11"
+    };
+    razorpay.orders.create(options, (err, order) => {
+        res.json(order)
+    });
 })
 
 module.exports = router

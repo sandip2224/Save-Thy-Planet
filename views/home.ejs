@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl.theme.default.css">
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
@@ -33,7 +35,9 @@
                                             <p class="slider-text hidden-xs">
                                                 <%= animal.desc%>
                                             </p>
-                                            <a href="#" class="btn btn-success hidden-xs">Take Action</a>
+                                            <a class="nav-btn">
+                                                <button class="btn btn-success" id="rzp-button2">Take Action</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +90,7 @@
                         <div class="col-md-10 natur-col text-center mx-auto">
                             <h2>Do you love animals?</h2>
                             <h4>We're open to all the help we can get</h4>
-                            <button class="btn btn-light">Save a Life Now</button>
+                            <button class="btn btn-light" id="rzp-button3">Save a Life Now</button>
                         </div>
                     </div>
                 </div>
@@ -141,6 +145,37 @@
         </div>
         <%- include('partials/footer.ejs') %>
 </body>
+<script>
+    axios.post('/order').then(info => {
+        var options = {
+            "key": `<%= keyId %>`,
+            "name": "Save Thy Planet Corp",
+            "description": "Transaction",
+            "image": "https://example.com/your_logo",
+            "order_id": info.data.id,
+            "callback_url": "/success",
+            "notes": {
+                "address": "Save-Thy-Planet Corporate Office"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        }
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button1').onclick = (e) => {
+            rzp1.open();
+            e.preventDefault();
+        }
+        document.getElementById('rzp-button2').onclick = (e) => {
+            rzp1.open();
+            e.preventDefault();
+        }
+        document.getElementById('rzp-button3').onclick = (e) => {
+            rzp1.open();
+            e.preventDefault();
+        }
+    })
+</script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

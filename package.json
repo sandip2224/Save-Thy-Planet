@@ -6,7 +6,8 @@
     "express": "^4.17.1",
     "lodash": "^4.17.21",
     "mongoose": "^6.0.8",
-    "owl.carousel": "^2.3.4"
+    "owl.carousel": "^2.3.4",
+    "razorpay": "^2.0.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
