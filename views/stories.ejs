@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Save Nature Charity Website Tempalte | Smarteyeapps.com</title>
+    <title>Wildlife | Blogs</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -19,186 +19,52 @@
 
     <!-- ################# Slider Starts Here#######################--->
 
-    <header class="continer-fluid ">
-        <div id="menu-jk" class="header-bottom">
+    <%- include('partials/navbar.ejs') %>
+
+
+        <!--  ************************* Page Title Starts Here ************************** -->
+        <div class="page-nav no-margin row">
             <div class="container">
-                <div class="row nav-row">
-                    <div class="col-lg-3 col-md-12 logo">
-                        <a href="index.html">
-                            <img src="images/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-lg-9 col-md-12 nav-col">
-                        <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="row">
+                    <h2>Our Blog</h2>
+                    <ul>
+                        <li> <a href="/home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><i class="fas fa-angle-double-right"></i> Stories</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">Home
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="blog.html">Blog</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="contact_us.html">Contact US</a>
-                                    </li>
+        <!--  ************************* Blog Starts Here ************************** -->
+        <div class="blog">
 
-
-
-
-                                </ul>
-                                <a class="nav-btn" href="contact_us.html">
-                                    <button class="btn btn-success">Donate Now</button>
-                                </a>
+            <div class="container">
+                <div class="row">
+                    <%blogs.forEach(blog=>{ %>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="blog-singe no-margin row">
+                                <div class="col-sm-5 blog-img-tab">
+                                    <img src="<%= blog.url %>" alt="">
+                                </div>
+                                <div class="col-sm-7 blog-content-tab">
+                                    <h2>
+                                        <%= blog.title%>
+                                    </h2>
+                                    <p class="blog-desic">
+                                        <%= blog.small %>
+                                    </p>
+                                    <a href="blog_single.html">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
                             </div>
-                        </nav>
-                    </div>
+                        </div>
+                        <% })%>
                 </div>
             </div>
         </div>
-    </header>
 
+        <!-- ######## Blog End ####### -->
 
-    <!--  ************************* Page Title Starts Here ************************** -->
-    <div class="page-nav no-margin row">
-        <div class="container">
-            <div class="row">
-                <h2>Our Blog</h2>
-                <ul>
-                    <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
-                    <li><i class="fas fa-angle-double-right"></i> About Us</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!--  ************************* Blog Starts Here ************************** -->
-    <div class="blog">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <div class="blog-singe no-margin row">
-                        <div class="col-sm-5 blog-img-tab">
-                            <img src="images/blog/blog_01.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7 blog-content-tab">
-                            <h2>Consequuntur magni</h2>
-                            <p class="blog-desic">Lorem Ipsum, type lorem then press the shortcut. The default keyboard
-                                shortcut is the same keyboard shortcut is the </p>
-                            <a href="blog_single.html">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="blog-singe no-margin row">
-                        <div class="col-sm-5 blog-img-tab">
-                            <img src="images/blog/blog_02.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7 blog-content-tab">
-                            <h2>Totam Rem Aperiam</h2>
-                            <p class="blog-desic">Lorem Ipsum, type lorem then press the shortcut. The default keyboard
-                                shortcut is the same keyboard shortcut is the </p>
-                            <a href="blog_single.html">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="blog-singe no-margin row">
-                        <div class="col-sm-5 blog-img-tab">
-                            <img src="images/blog/blog_04.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7 blog-content-tab">
-                            <h2>Excepteur sint occaecat</h2>
-                            <p class="blog-desic">Lorem Ipsum, type lorem then press the shortcut. The default keyboard
-                                shortcut is the same keyboard shortcut is the </p>
-                            <a href="blog_single.html">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="blog-singe no-margin row">
-                        <div class="col-sm-5 blog-img-tab">
-                            <img src="images/blog/blog_03.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7 blog-content-tab">
-                            <h2>Curabit finibus dui sem.</h2>
-                            <p class="blog-desic">Lorem Ipsum, type lorem then press the shortcut. The default keyboard
-                                shortcut is the same keyboard shortcut is the </p>
-                            <a href="blog_single.html">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ######## Blog End ####### -->
-
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 about">
-                    <h2>About Us</h2>
-                    <p>Phasellus scelerisque ornare nisl sit amet pulvinar. Nunc non scelerisque augue. Proin et
-                        sollicitudin velit. </p>
-
-                    <div class="foot-address">
-                        <div class="icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="addet">
-                            BlueDart
-                            Marthandam (K.K District)
-                            Tamil Nadu, IND
-                        </div>
-                    </div>
-                    <div class="foot-address">
-                        <div class="icon">
-                            <i class="far fa-envelope-open"></i>
-                        </div>
-                        <div class="addet">
-                            info@smarteyeapps.com <br>
-                            sales@smarteyeapps.com
-                        </div>
-                    </div>
-                    <div class="foot-address">
-                        <div class="icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="addet">
-                            +23 323 43434 <br>
-                            +1 3232 434 55
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 fotblog">
-                    <h2>From latest Blog</h2>
-                    <div class="blohjb">
-                        <p>dignissim. Integer tempor facilisis malesuada. Proin ac varius velit, tincidunt condimentum
-                        </p>
-                        <span>22-1-2019</span>
-                    </div>
-                    <div class="blohjb">
-                        <p>dignissim. Integer tempor facilisis malesuada. Proin ac varius velit, tincidunt condimentum
-                        </p>
-                        <span>22-1-2019</span>
-                    </div>
-                    <div class="blohjb">
-                        <p>dignissim. Integer tempor facilisis malesuada. Proin ac varius velit, tincidunt condimentum
-                        </p>
-                        <span>22-1-2019</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        <%- include('partials/footer.ejs') %>
 
 </body>
 

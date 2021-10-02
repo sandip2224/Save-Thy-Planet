@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const { titles, descriptions, animals } = require("../list")
+const { blogs, animals } = require("../list")
 
 router.get('/', (req, res) => {
     res.render("home", {
@@ -18,7 +18,13 @@ router.get('/animal/:animalName', (req, res) => {
 })
 
 router.get('/stories', (req, res) => {
-    res.render('stories')
+    res.render('stories', {
+        blogs
+    })
+})
+
+router.get('/contact', (req, res) => {
+    res.render('contact')
 })
 
 router.get('/stories/:storyVal', (req, res) => {
