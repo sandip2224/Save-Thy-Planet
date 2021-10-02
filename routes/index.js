@@ -4,6 +4,9 @@ const Razorpay = require('razorpay')
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
+
+const { ensureAuth, ensureGuest } = require('../middleware/auth')
+
 const razorpay = new Razorpay({
     key_id: process.env.keyId,
     key_secret: process.env.keySecret
@@ -11,6 +14,20 @@ const razorpay = new Razorpay({
 const router = express.Router()
 
 const { blogs, animals } = require("../utils/list")
+
+// GET login
+router.get('/member/register', ensureGuest, (req, res) => {
+    res.render("register", {
+        layout: 'register'
+    })
+})
+
+// GET login
+router.get('/member/login', ensureGuest, (req, res) => {
+    res.render("login", {
+        layout: 'login'
+    })
+})
 
 // @GET /home
 router.get('/', (req, res) => {
@@ -110,6 +127,11 @@ router.post('/order', (req, res) => {
     razorpay.orders.create(options, (err, order) => {
         res.json(order)
     });
+})
+
+// @GET /test
+router.get('/member', ensureAuth, (req, res) => {
+    res.render('test')
 })
 
 module.exports = router
