@@ -160,4 +160,11 @@ router.get('/member', ensureAuth, (req, res) => {
     })
 })
 
+// @GET /facts
+router.get('/facts', (req, res) => {
+    res.render('facts', {
+        keyId: process.env.keyId
+    })
+})
+
 module.exports = router

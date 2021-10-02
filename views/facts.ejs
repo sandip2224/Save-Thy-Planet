@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Endangered Species | Facts</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/facts.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs')%>
+        <div class="jumbotron">
+            <h1>Facts you didn't know about our wildlife</h1>
+        </div>
+        <div class=" container container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    ✅ The heart of a shrimp is located in its head.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ A snail can sleep for three years.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ The fingerprints of a koala are so indistinguishable from humans that they have on occasion been
+                    confused at a crime scene.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ Slugs have four noses.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ Elephants are the only animal that can't jump.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ A rhinoceros' horn is made of hair.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ It is possible to hypnotize a frog by placing it on its back and gently stroking its stomach.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ It takes a sloth two weeks to digest its food.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ Nearly three percent of the ice in Antarctic glaciers is penguin urine.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ A cow gives nearly 200,000 glasses of milk in a lifetime.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ Bats always turn left when leaving a cave.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    ✅ Giraffes have no vocal chords.
+                </div>
+            </div>
+        </div>
+        <div class="containr">&nbsp;</div>
+        <%- include('partials/footer.ejs')%>
+            <script>
+                axios.post('/order').then(info => {
+                    var options = {
+                        "key": `<%= keyId %>`,
+                        "name": "Save Thy Planet Corp",
+                        "description": "Transaction",
+                        "order_id": info.data.id,
+                        "callback_url": "/success",
+                        "notes": {
+                            "address": "Save-Thy-Planet Corporate Office"
+                        }
+                    }
+                    var rzp1 = new Razorpay(options);
+                    document.getElementById('rzp-button1').onclick = (e) => {
+                        rzp1.open();
+                        e.preventDefault();
+                    }
+                })
+            </script>
+            <script src="/js/jquery-3.2.1.min.js"></script>
+            <script src="/js/popper.min.js"></script>
+            <script src="/js/bootstrap.min.js"></script>
+            <script src="/js/owl.carousel.min.js"></script>
+            <script src="/js/jquery-scrolltofixed-min.js"></script>
+            <script src="/js/script.js"></script>
+</body>
+
+</html>

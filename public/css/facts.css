@@ -1,0 +1,18 @@
+.card{
+    margin-top: 30px;
+    transition-duration: 0.2s;
+}
+
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.card-body{
+    padding: 20px;
+    font-size: 20px;
+}
+
+.jumbotron{
+    text-align: center;
+}
