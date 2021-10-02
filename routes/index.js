@@ -16,10 +16,6 @@ router.get('/home', (req, res) => {
     res.redirect("/")
 })
 
-router.get('/animal/:animalName', (req, res) => {
-    console.log(req.params.animalName);
-})
-
 router.get('/stories', (req, res) => {
     res.render('stories', {
         blogs
@@ -28,14 +24,6 @@ router.get('/stories', (req, res) => {
 
 router.get('/contact', (req, res) => {
     res.render('contact')
-})
-
-router.get('/success', (req, res) => {
-    res.render('error/successMail')
-})
-
-router.get('/failure', (req, res) => {
-    res.render('error/failureMail')
 })
 
 router.post('/form', (req, res) => {
@@ -62,12 +50,21 @@ router.post('/form', (req, res) => {
         })
 })
 
+router.get('/success', (req, res) => {
+    res.render('error/successMail')
+})
+
+router.get('/failure', (req, res) => {
+    res.render('error/failureMail')
+})
+
+router.get('/animal/:animalName', (req, res) => {
+    console.log(req.params.animalName);
+})
+
 router.get('/stories/:storyVal', (req, res) => {
     const storyName = req.params.storyVal
-    res.render("story", {
-        title: titles[storyName],
-        desc: descriptions[storyName]
-    })
+    res.render("story")
 })
 
 module.exports = router

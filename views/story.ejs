@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
     <meta charset="utf-8">
-    <title>T1</title>
-    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blog Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/story.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 </head>
 
 <body>
-    <%- include('partials/navbar.ejs') %>
-        <div class="container container-fluid">
-            <div class="header">
-                <h1>
-                    <%= title %>
-                </h1>
+    <div class="jumbotron">
+        <div class="card">
+            <div class="container container-fluid">
+                <h1>Rajah Scops Owl rediscovered in Borneo</h1>
+                <h5>An unexpected discovery confirming the existence of O. brookii brookii has sparked new interest in
+                    finding the owl again</h5>
+                <div class="container container-fluid">
+                    <img src="/images/blog/owl.jpg" class="img-fluid" alt="Blog Image">
+                </div>
             </div>
-            <div class="description">
-                <p>
-                    <%= desc %>
-                </p>
+            <div class="container container-fluid">
+                <hr align="center">
+                <p>In 2009 a team, led by Thomas Martin and including avian ecologist Andy Boyce, began observing birds
+                    and
+                    searching for nests in and around Kinabalu Park in Sabah, a Malaysian state in Borneo, as part of a
+                    decade-long project. <br><br>
+                    A year in, on May 4, 2016, one member of the group, Keegan Tranquillo, came across
+                    an owl which looked distinctly different to others on the site, and quickly alerted Boyce to the
+                    unusual
+                    individual. “I was pretty convinced immediately that it was a[Rajah Scops Owl],” says Boyce, who is
+                    currently an ecologist at the Smithsonian Conservation Biology Institute. “I knew of the owl, I knew
+                    that there was a possibility that it should occur somewhere on Mount Kinabalu, but there was no
+                    concerted effort to survey specifically for this bird.” <br><br>
+                    The owl was found roosting about a meter above the ground near a small bank.Boyce and his colleagues
+                    made the most of the rare opportunity, snapping as many photos of the individual as they could – the
+                    first ever images of O.brookii brookii.Though it may be notoriously difficult to find, once spotted,
+                    it
+                    is relatively easy to distinguish it from the Mountain Scops Owl that is common in the region, says
+                    Boyce.The Rajah species is larger in size and has distinctly orange irises, as well as the small ear
+                    tufts characteristic of Scops Owls in general. It also has a speckled brown and black crown.</p>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
