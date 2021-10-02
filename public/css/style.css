@@ -683,6 +683,10 @@ footer .tags ul li {
     font-size: 1.2rem;
     margin-bottom: 20px; }
 
+  #alert1, #alert2{
+    display: none;
+  }
+
 /* ===================================== Slider CSS ==================================== */
 @media screen and (max-width: 1072px) {
   header .nav-col .navbar-nav li {
@@ -691,4 +695,3 @@ footer .tags ul li {
   header .nav-col .navbar-nav li {
     padding: 7px 13px; } }
 
-/*# sourceMappingURL=style.css.map */

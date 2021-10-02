@@ -4,7 +4,6 @@ const Razorpay = require('razorpay')
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 const razorpay = new Razorpay({
@@ -82,6 +81,31 @@ router.post('/form', (req, res) => {
         })
 })
 
+// @POST /membership_form
+router.post('/form2', (req, res) => {
+    console.log(req.body)
+    const msg = {
+        to: 'sandipan2224@gmail.com',
+        from: 'sandipan2224@gmail.com',
+        subject: `Membership Email from ${req.body.name}`,
+        text:
+            `
+            Name: ${req.body.name}
+            Email: ${req.body.email}
+            Message: ${req.body.reason}
+            `
+    }
+    sgMail
+        .send(msg)
+        .then(() => {
+            res.redirect('/success')
+        })
+        .catch((error) => {
+            console.error(error)
+            res.redirect('/failure')
+        })
+})
+
 // @GET /mail_transfer_success
 router.get('/success', (req, res) => {
     res.render('error/successMail')
@@ -131,7 +155,9 @@ router.post('/order', (req, res) => {
 
 // @GET /test
 router.get('/member', ensureAuth, (req, res) => {
-    res.render('test')
+    res.render('test', {
+        name: req.user.firstName
+    })
 })
 
 module.exports = router
