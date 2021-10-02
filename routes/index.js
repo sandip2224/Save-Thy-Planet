@@ -31,11 +31,11 @@ router.get('/contact', (req, res) => {
 })
 
 router.get('/success', (req, res) => {
-    res.render('successMail')
+    res.render('error/successMail')
 })
 
 router.get('/failure', (req, res) => {
-    res.render('failureMail')
+    res.render('error/failureMail')
 })
 
 router.post('/form', (req, res) => {
