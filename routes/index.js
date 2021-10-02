@@ -68,14 +68,10 @@ router.get('/failure', (req, res) => {
 router.post('/success', (req, res) => {
     razorpay.payments.fetch(req.body.razorpay_payment_id).then(paymentDocument => {
         if (paymentDocument.status === 'captured') {
-            res.json({
-                status: 'Success Payment'
-            })
+            res.render("error/successPayment")
         }
         else {
-            res.json({
-                status: 'Failed Payment'
-            })
+            res.render("error/failurePayment")
         }
     })
 })
