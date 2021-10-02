@@ -25,12 +25,15 @@ router.get('/home', (req, res) => {
 
 router.get('/stories', (req, res) => {
     res.render('stories', {
-        blogs
+        blogs,
+        keyId: process.env.keyId
     })
 })
 
 router.get('/contact', (req, res) => {
-    res.render('contact')
+    res.render('contact', {
+        keyId: process.env.keyId
+    })
 })
 
 router.post('/form', (req, res) => {

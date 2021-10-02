@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 </head>
 
 <body>
@@ -64,7 +67,33 @@
         <%- include('partials/footer.ejs') %>
 
 </body>
-
+<script>
+    axios.post('/order').then(info => {
+        var options = {
+            "key": `<%= keyId %>`,
+            "name": "Save Thy Planet Corp",
+            "description": "Transaction",
+            "order_id": info.data.id,
+            "callback_url": "/success",
+            "notes": {
+                "address": "Save-Thy-Planet Corporate Office"
+            }
+        }
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button1').onclick = (e) => {
+            rzp1.open();
+            e.preventDefault();
+        }
+        document.getElementById('rzp-button2').onclick = (e) => {
+            rzp1.open();
+            e.preventDefault();
+        }
+        document.getElementById('rzp-button3').onclick = (e) => {
+            rzp1.open();
+            e.preventDefault();
+        }
+    })
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
