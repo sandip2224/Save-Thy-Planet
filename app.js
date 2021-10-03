@@ -1,7 +1,5 @@
 const express = require('express')
 const path = require('path')
-const http = require('http')
-const socketio = require('socket.io')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
@@ -15,8 +13,6 @@ require('./config/passsport')(passport)
 connectDB()
 
 const app = express()
-const server = http.createServer(app)
-const io = socketio(server)
 
 // EJS setup
 app.set('view engine', 'ejs');
@@ -45,10 +41,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', require("./routes/index"))
 app.use('/auth', require('./routes/auth'))
-
-io.on('connection', (socket) => {
-    console.log("New user connected");
-});
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, console.log(`Server listening on port ${PORT}`))
