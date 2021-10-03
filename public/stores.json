@@ -1,0 +1,174 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.1428115,
+                    51.5125168
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Patisserie Mayfair"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.579623,
+                    51.452251
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Patisserie Bristol"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.273459,
+                    52.638072
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Patisserie Norwich"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.9912838,
+                    50.8000418
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Patisserie Wimborne"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.985933,
+                    53.408899
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Patisserie Liverpool"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.689423,
+                    52.632469
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Patisserie Tamworth"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.155305,
+                    51.479756
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Patisserie Cardiff"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.725019,
+                    52.668891
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Cafe Oakham"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.477653,
+                    53.735405
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Cafe Blackburn"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.211363,
+                    51.108966
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Cafe Crawley"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.123559,
+                    50.832679
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Cafe Brighton"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.319575,
+                    52.517827
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Cafe Newtown"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.158167,
+                    52.071634
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "name": "Josie's Cafe Ipswich"
+            }
+        }
+    ]
+}

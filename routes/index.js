@@ -196,5 +196,27 @@ router.post('/action', (req, res) => {
     })
 })
 
+router.get('/map', (req, res) => {
+    var locations = [];
+    violationModel.find({}, (err, docs) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            console.log("Queries Matched : ", docs);
+            docs.forEach(e1 => {
+                locations.push({
+                    lat: parseFloat(e1.lat),
+                    lng: parseFloat(e1.lon)
+                })
+            })
+        }
+    })
+    res.render("map", {
+        keyId: process.env.keyId,
+        locations: locations,
+        apiUrl: "https://maps.googleapis.com/maps/api/js?key=" + process.env.MAP_API_KEY + "&callback=initMap&v=weekly"
+    })
+})
 
 module.exports = router
