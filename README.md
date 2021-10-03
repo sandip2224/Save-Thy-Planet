@@ -1,4 +1,4 @@
-# Save Thy Planet 💳
+# Save Thy Planet 🌏
 <!-- <p align="center">
    <img src="media/banner.png" alt="Logo"/>
 </p> -->
