@@ -157,7 +157,8 @@ router.post('/order', (req, res) => {
 // @GET /test
 router.get('/member', ensureAuth, (req, res) => {
     res.render('test', {
-        name: req.user.firstName
+        name: req.user.firstName,
+        keyId: process.env.keyId
     })
 })
 
