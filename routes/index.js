@@ -5,6 +5,7 @@ const Razorpay = require('razorpay')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
+const violationModel = require('../models/Violation')
 
 const razorpay = new Razorpay({
     key_id: process.env.keyId,
@@ -166,5 +167,34 @@ router.get('/facts', (req, res) => {
         keyId: process.env.keyId
     })
 })
+
+// @GET /action_form__page
+router.get('/action', (req, res) => {
+    res.render('action', {
+        keyId: process.env.keyId
+    })
+})
+
+router.post('/action', (req, res) => {
+    console.log(req.body);
+    const newViolation = new violationModel({
+        fullName: req.body.fullName,
+        address: req.body.address,
+        postalCode: req.body.pincode,
+        caddress: req.body.caddress,
+        description: req.body.description,
+        lat: req.body.lat,
+        lon: req.body.lon
+    })
+    newViolation.save()
+        .then(doc => {
+            console.log("Insertion success")
+        })
+        .catch(err => console.log(err))
+    res.render('action', {
+        keyId: process.env.keyId
+    })
+})
+
 
 module.exports = router
