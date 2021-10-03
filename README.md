@@ -3,9 +3,12 @@
    <img src="media/banner.png" alt="Logo"/>
 </p> -->
 
-https://user-images.githubusercontent.com/61842142/135277378-3f9b2994-ab2b-4779-9817-0c6fdd84b5ff.mp4
 
-You can Install and test Wallet-X webapp from below 👇
+
+https://user-images.githubusercontent.com/61842142/135750876-83b5d389-0f09-4697-95f8-5d4d03ef2ed5.mp4
+
+
+You can Install and test Save-Thy-Planet webapp from below 👇
 
 <p>
   <img src="https://img.shields.io/badge/MAINTAINED-YES-brightgreen?style=for-the-badge&logo=appveyor">
